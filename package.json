@@ -18,9 +18,12 @@
   },
   "homepage": "https://github.com/TomerBenShimol/Forkify-App#readme",
   "dependencies": {
-    "parcel": "^2.8.3"
+    "core-js": "^3.30.1",
+    "parcel": "^2.8.3",
+    "regenerator-runtime": "^0.13.11"
   },
   "devDependencies": {
-    "@parcel/transformer-sass": "^2.8.3"
+    "@parcel/transformer-sass": "^2.8.3",
+    "process": "^0.11.10"
   }
 }
