@@ -24,11 +24,12 @@ const renderSpinner = async function (parentEl) {
     `;
   parentEl.innerHTML = '';
   parentEl.insertAdjacentHTML('afterbegin', markup);
-  console.log(parentEl.innerHTML);
 };
 
-const showRecipe = async function (id) {
+const showRecipe = async function () {
   try {
+    const id = window.location.hash.slice(1);
+    if (!id) return;
     await renderSpinner(recipeContainer);
     const res = await fetch(
       `https://forkify-api.herokuapp.com/api/v2/recipes/${id}`
@@ -142,14 +143,14 @@ const showRecipe = async function (id) {
   </div>`;
     recipeContainer.innerHTML = '';
     recipeContainer.insertAdjacentHTML('afterbegin', markup);
-    // const message = document.querySelector('.message');
-    // message.style.display = 'none';
   } catch (err) {
     alert(err);
   }
 };
 
-showRecipe('5ed6604591c37cdc054bc886');
+// showRecipe();
+
+['hashchange', 'load'].forEach(ev => window.addEventListener(ev, showRecipe));
 
 // (async function () {
 //   const recipe1 = await getRecipe('5ed6604591c37cdc054bc886');
