@@ -1,0 +1,26 @@
+{
+  "name": "forkify",
+  "version": "1.0.0",
+  "description": "Recipe application",
+  "default": "index.html",
+  "scripts": {
+    "start": "parcel index.html",
+    "build": "parcel build index.html"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TomerBenShimol/Forkify-App.git"
+  },
+  "author": "Tomer Ben Shimol",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/TomerBenShimol/Forkify-App/issues"
+  },
+  "homepage": "https://github.com/TomerBenShimol/Forkify-App#readme",
+  "dependencies": {
+    "parcel": "^2.8.3"
+  },
+  "devDependencies": {
+    "@parcel/transformer-sass": "^2.8.3"
+  }
+}
